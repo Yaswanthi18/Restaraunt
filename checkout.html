@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#100e0c">
+  <title>Dine-In Checkout | DineEase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
+</head>
+<body class="inner-page">
+  <header class="navbar"><a href="index.html" class="logo">Dine<span>Ease.</span></a><button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="navLinks"><a href="index.html#home">Home</a><a href="index.html#about">About</a><a href="index.html#cuisines">Cuisines</a><a href="menu.html?cuisine=indian">Our Menu</a><a href="index.html#contact">Contact</a><a href="cart.html">Cart <span class="cart-count" data-cart-count>0</span></a><a href="index.html#reservation" class="nav-btn">Reserve a Table</a></nav>
+  </header>
+  <main>
+    <section class="page-hero compact-hero"><p class="eyebrow">DINE WITH US</p><h1>Reserve Your Table</h1><p class="page-intro">Tell us who’s joining and where you’d like to sit.</p></section>
+    <section class="section checkout-layout">
+      <form id="checkoutForm" class="reservation-form checkout-form">
+        <label for="customerName">Your name</label><input id="customerName" name="name" type="text" placeholder="Full name" autocomplete="name" required>
+        <label for="customerPhone">Phone number</label><input id="customerPhone" name="phone" type="tel" placeholder="e.g. +91 98765 43210" autocomplete="tel" pattern="[0-9+() -]{10,16}" required>
+        <label for="tableNumber">Dining table</label><select id="tableNumber" name="table" required><option value="">Select a table</option><option>Table 1</option><option>Table 2</option><option>Table 3</option><option>Table 4</option><option>Table 5</option><option>Table 6</option><option>Table 7</option><option>Table 8</option><option>Table 9</option><option>Table 10</option></select>
+        <p class="demo-note checkout-note">This is a dine-in order. Your table selection will appear with your order.</p>
+        <button type="submit" class="btn btn-primary" id="confirmOrderButton">Confirm Dine-In Order</button><p id="checkoutMessage" class="form-message" role="alert" aria-live="polite"></p>
+      </form>
+      <aside class="summary-card checkout-summary"><p class="eyebrow">AT YOUR TABLE</p><h2>Order Summary</h2><div id="checkoutItems" class="checkout-items"></div>
+        <div class="bill-line"><span>Subtotal</span><strong id="checkoutSubtotal">₹0</strong></div><div class="bill-line"><span>GST <small>(5%)</small></span><strong id="checkoutTax">₹0</strong></div><div class="bill-line bill-total"><span>Grand Total</span><strong id="checkoutTotal">₹0</strong></div>
+      </aside>
+    </section>
+  </main>
+  <footer class="footer compact-footer"><div class="copyright"><p>© DineEase. A world of flavours. One destination.</p></div></footer>
+  <script src="food-data.js"></script><script src="script.js"></script>
+</body>
+</html>
