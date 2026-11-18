@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#100e0c">
+  <title>Your Cart | DineEase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
+</head>
+<body class="inner-page">
+  <header class="navbar"><a href="index.html" class="logo">Dine<span>Ease.</span></a><button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="navLinks"><a href="index.html#home">Home</a><a href="index.html#about">About</a><a href="index.html#cuisines">Cuisines</a><a href="menu.html?cuisine=indian">Our Menu</a><a href="index.html#contact">Contact</a><a href="cart.html" aria-current="page">Cart <span class="cart-count" data-cart-count>0</span></a><a href="index.html#reservation" class="nav-btn">Reserve a Table</a></nav>
+  </header>
+  <main>
+    <section class="page-hero compact-hero"><p class="eyebrow">YOUR SELECTION</p><h1>Your Cart</h1><p class="page-intro">A good meal starts with choosing what you love.</p></section>
+    <section class="section cart-layout">
+      <div id="cartItems" class="cart-items" aria-live="polite"></div>
+      <aside id="cartSummary" class="summary-card">
+        <p class="eyebrow">BILL SUMMARY</p><h2>Your Total</h2>
+        <div class="bill-line"><span>Subtotal</span><strong id="cartSubtotal">₹0</strong></div>
+        <div class="bill-line"><span>GST <small>(5%)</small></span><strong id="cartTax">₹0</strong></div>
+        <div class="bill-line bill-total"><span>Grand Total</span><strong id="cartTotal">₹0</strong></div>
+        <a href="checkout.html" class="btn btn-primary full-button" id="checkoutButton">Proceed to Checkout</a>
+      </aside>
+      <div class="empty-state" id="emptyCart" hidden><p class="eyebrow">NOTHING ON THE TABLE YET</p><h2>Your cart is waiting.</h2><p>Explore our cuisines and add a few favourites.</p><a href="index.html#cuisines" class="btn btn-primary">Continue Exploring</a></div>
+    </section>
+  </main>
+  <footer class="footer compact-footer"><div class="copyright"><p>© DineEase. A world of flavours. One destination.</p></div></footer>
+  <script src="food-data.js"></script><script src="script.js"></script>
+</body>
+</html>
