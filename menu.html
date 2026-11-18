@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100e0c">
+  <title>Our Menu | DineEase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="inner-page">
+  <header class="navbar">
+    <a href="index.html" class="logo">Dine<span>Ease.</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#home">Home</a><a href="index.html#about">About</a><a href="index.html#cuisines">Cuisines</a>
+      <a href="menu.html?cuisine=indian" aria-current="page">Our Menu</a><a href="index.html#contact">Contact</a>
+      <a href="cart.html">Cart <span class="cart-count" data-cart-count>0</span></a><a href="index.html#reservation" class="nav-btn">Reserve a Table</a>
+    </nav>
+  </header>
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">MADE FOR YOUR TABLE</p>
+      <h1 id="cuisineTitle">Our Menu</h1>
+      <p id="cuisineDescription" class="page-intro">Choose a cuisine and find a new favourite.</p>
+      <div class="cuisine-tabs" aria-label="Choose a cuisine">
+        <a href="menu.html?cuisine=indian" data-cuisine="indian">Indian</a>
+        <a href="menu.html?cuisine=italian" data-cuisine="italian">Italian</a>
+        <a href="menu.html?cuisine=chinese" data-cuisine="chinese">Chinese</a>
+        <a href="menu.html?cuisine=mexican" data-cuisine="mexican">Mexican</a>
+      </div>
+    </section>
+    <section class="section menu-page-section">
+      <div class="dish-grid menu-grid" id="menuGrid" aria-live="polite"></div>
+      <p class="form-message toast" id="menuMessage" role="status" aria-live="polite"></p>
+      <div class="menu-actions"><a href="index.html#cuisines" class="btn btn-outline">← Back to Cuisines</a><a href="cart.html" class="btn btn-primary">View Your Cart</a></div>
+    </section>
+  </main>
+  <footer class="footer compact-footer"><div class="copyright"><p>© DineEase. A world of flavours. One destination.</p></div></footer>
+  <script src="food-data.js"></script><script src="script.js"></script>
+</body>
+</html>
